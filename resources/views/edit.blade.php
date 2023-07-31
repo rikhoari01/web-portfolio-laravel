@@ -354,7 +354,7 @@
 
   <!-- Javascript -->
   <script>
-    const firebaseConfig = {
+    var firebaseConfig = {
       apiKey: {{ config('firebase.API_KEY') }},
       authDomain: {{ config('firebase.AUTH_DOMAIN') }},
       projectId: {{ config('firebase.PROJECT_ID') }},

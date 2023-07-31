@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [Controller::class, 'index']);
 Route::get('/login', [Controller::class, 'login'])->middleware('guest')->name('login');
-Route::get('/edit', [Controller::class, 'edit'])->middleware('guest');
+Route::get('/edit', [Controller::class, 'edit'])->middleware('auth');
 
 Route::post('/signin', [Controller::class, 'signin']);
 Route::post('/signout', [Controller::class, 'signout']);
