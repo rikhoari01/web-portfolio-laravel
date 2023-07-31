@@ -6,6 +6,7 @@ use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
+use Carbon\Carbon;
 
 class DatabaseSeeder extends Seeder
 {
@@ -18,7 +19,8 @@ class DatabaseSeeder extends Seeder
     {
         User::create([
             'email' => 'myemail@abdurikho.my.id',
-            'password' => Hash::make("@myN4m3!sRiKh0")
+            'password' => Hash::make("@myN4m3!sRiKh0"),
+            'email_verified_at' => Carbon::now(),
         ]);
     }
 }
